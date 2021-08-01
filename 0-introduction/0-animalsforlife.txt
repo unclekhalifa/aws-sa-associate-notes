@@ -1,0 +1,48 @@
+Company information
+---
+
+- Animal rescue and awareness organisation
+- Progressive org with monitoring work (animal migration and habitat destruction)
+- Works with IoT & big datasets
+
+- Global with HQ in Brisbane, Australia. 100 staff
+- Call center, Admin, IT, Marketing, Legal & Accounts
+
+- ~100 remote workers across Australia and globally
+- Animal care, activists, lobbyists and data collectors
+
+- Major offices in London, New York & Seattle
+
+Current Setup
+---
+- Small on-prem datacenter in Brisbane
+- Badly implemented AWS trial in SYD region
+- A few isolated Azure/GCP pilots
+- Global offices & mobile staff utilise Brisbane infra
+- Cost conscious but progressive as long as it has business benefit
+
+Head office:
+- On-prem IP: 192.168.10.0/24
+- AWS pilot: 10.0.0.0/16
+- Azure pilot: 172.31.0.0/16
+
+Offices in:
+- New York
+- Seattle
+- London
+- Brisbane
+
+Current problems:
+- Legacy on prem hardware is failing
+- AWS/Azure pilots were messy and not best practice
+- Performance issues for the field works because of the Brisbane deployment
+- Lack of HA & Scability
+- Little automation
+- Global expansion concerns - cost for new infrastructure
+
+Ideal outcomes:
+- Fast performance for all field workers
+- Able to deploy into new regions quickly when required
+- Low cost & scalable base infrastructure
+- Agility: spin up new marketing campaigns, social and progressive applications (IOT, Big Data, etc)
+- Automation: low base staffing costs
