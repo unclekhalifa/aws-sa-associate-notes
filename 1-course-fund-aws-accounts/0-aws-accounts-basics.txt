@@ -1,0 +1,8 @@
+AWS Accounts
+------------
+
+- An AWS account is a container for identities (users) and resources
+- Account root user has full control over all of this AWS account and any resources created within it & cannot be restricted
+- IAM users, groups and roles can also be created and given full or limited permissions
+- Having multiple AWS accounts is considered best practice to limit disasters. Ex: prod, dev & test accounts
+- Unless you explicitly allow something, by default access is denied

@@ -1,0 +1,16 @@
+Setting up billing alerts:
+- Go to my billing dashboard
+- Billing preferences
+- Tick all 3 options and provide an email
+- Go to CloudWatch
+- Create alarm
+- Select billing
+- Select total estimated charge
+- Select USD
+- Set conditions to Static > Greater > 1USD
+- On configure actions, use In alarm > create new topic > provide email address
+
+To activate IAM user & role access to billing info:
+- Go to My account
+- Scroll down to IAM user & role access to billing information
+- Activate IAM access

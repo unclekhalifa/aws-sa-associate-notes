@@ -1,0 +1,23 @@
+IAM
+---
+IAM is globally resilient (always secure across all AWS regions)
+Each account has 1 IAM database.
+
+IAM user: identities which represent humans or applications that need access to the account
+
+IAM group: collection of related users, e.g. development, finance, etc
+
+IAM role: can be used by AWS services, for granting external access to your account
+
+IAM policies: used to allow or deny access to services only when they're attached to users, groups or roles.
+On their own, they don't do anything
+
+IAM:
+- manages identities (IDP)
+- authenticates
+- authorises
+
+Best practices
+--------------
+Only grant access as it's required - i.e. least privilege
+Only use account root user to set up the account
