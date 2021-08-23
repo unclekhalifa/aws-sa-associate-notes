@@ -1,0 +1,9 @@
+
+Unit of consumption: the service that you consume. If you use EC2, you consume 
+the operating system. If you use Netflix, you consume the service
+
+IaaS (infra as a service): you maintain the OS and everything above it
+
+PaaS (platform as a service): you maintain the application
+
+SaaS (software as a service): gmail, netflix, etc
