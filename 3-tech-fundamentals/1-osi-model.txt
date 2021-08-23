@@ -1,0 +1,107 @@
+OSI Model
+---------
+
+Layer 7 - Application
+Layer 6 - Presentation
+Layer 5 - Session
+Layer 4 - Transport
+
+Layer 3 - Network
+Layer 2 - Data Link
+Layer 1 - Physical
+---
+
+Layer 1 - Physical
+------------------
+Data transmitted on a physical level through copper (electricity), fibre (light) or WiFi (RF)
+Specifications defined by things like voltage levels, timings, rates, distances, modulaiton & connectors
+
+Hub: anything received on any port is transmitted on every other port. It's a way to broadcast traffic to 
+all devices connected
+
+Layer 1 has no device addressing. All data is processed by all devices
+
+L1 has no media access control and no collision detection
+---
+
+Layer 2 - Data link
+-------------------
+Frames are used to send data over an L2 network
+
+L2 introduces MAC address which is used to identify a device on L2 network
+
+Data being transferred to L1 from L2 is not understood by L1
+
+Frame breakdown:
+- Preamble: start of the frame and information about the frame
+- Destination MAC address
+- Source MAC address
+- Ether type (which L3 protocol is putting its data in the frame)
+- Payload (46-1500 bytes): data being sent - supplied by L3 protocol
+- FCS (frame check sequence): used to check if corruption has occurred
+
+How data gets sent:
+- A uses L1 and intends to send data to B. L2 creates a frame
+- If there's no signal being sent on L1, data will be sent. This check is done with CSMA (carrier sends multiple access)
+- Block of data is sent over L1
+- B receives raw data and parses it as a frame. It sees the data is destined is for itself and uses the data
+
+L2 devices can detect collisions and send jam signals to prevent any devices from sending transmission
+
+Switch: uses a MAC address table to learn the addresses of all the devices on the network. 
+If the switch doesn't have the address beforehand, it will forward to all ports. Otherwise it will send it 
+directly to the destination
+
+Unicast: 1-1 communications
+Broadcast: 1-ALL communications
+---
+
+Layer 3 - Network
+-----------------
+This layer deals with moving data across different networks - example: between two different geographical locations
+Protocols used for L3 are usually PPP, MPLS & ATM
+
+L3 implements IP
+
+Routers (L3 device) remove frame encapsulation and add new frame encapsulation at every hop. Data is sent as packets
+
+Packets (IPv4) breakdown:
+- Source IP address
+- Destination IP address
+- Protocol (ICMP, TCP, UDP)
+- TTL (how many hops to take before data can be discarded)
+
+Packets (IPv6) breakdown:
+- Hop limit (same as TTL)
+- Larger IP addresses
+
+IP addressing: used to identify a device using L3
+
+Two parts to an IP address:
+- Network part: 1st half of the IP address
+- Host part: 2nd half of the IP address
+
+If the 1st half of 2 IP addresses match, then devices are local
+
+Subnet mask: allows a host to determine if an IP address it needs to communicate with is local or remote. 
+This influences if it needs to go through the gateway or communicate locally
+
+Subnet mask allows us to know which part is for the network
+
+Given the following IP address and subnet mask:
+133.33.3.7
+255.255.0.0 (or /16)
+
+This tells us the 1st 16 bits are for the network and the last 16 are for the hosts
+
+Network starts at 133.33.0.0
+Network ends at 133.33.255.255
+
+Packet transfer process:
+- Packets leave the default route of home address and end up at the ISP's Router
+- Router has multiple interfaces and multiple route tables
+- The route tables contain destination IPs and next hop/targets
+- Depending on the IP selected, the router will select the most specific route 
+as the destination. Example, given a destination 52.217.13.37 and a route 
+52.217.13.0/24, this will be selected as it's closest to the destination IP address
+- Packets are forwarded to next router for succeeding hops
