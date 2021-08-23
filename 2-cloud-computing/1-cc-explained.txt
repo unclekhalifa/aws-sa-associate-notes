@@ -1,0 +1,19 @@
+Cloud Computing
+---------------
+
+Characteristics of cloud computing:
+
+1. On demand self service: can provision capabilities as needed 
+without requiring human interaction
+
+2. Broad network access: capabilities are available over the network and 
+accessed through standard mechanisms
+
+3. Resource pooling: there is a sense of location independence - no control 
+or knowledge over the exact location of the resources. Resources are pooled to 
+serve multiple consumers using a multi tenant model
+
+4. Rapid elasticity: capabilities can be elasticically provisioned and released to 
+scale rapidly outward and inward with demand. Capabilities often appear to be unlimited
+
+5. Measured service: resource usage can be monitored, controlled, reported and billed
