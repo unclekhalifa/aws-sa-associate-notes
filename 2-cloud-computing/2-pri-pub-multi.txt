@@ -1,0 +1,21 @@
+Public cloud
+------------
+AWS, Azure & Google. Publicly available for use + meets the formal spec for cloud
+
+Multi cloud
+-----------
+Deploying across AWS, Azure & Google
+
+Private cloud
+-------------
+Running cloud on prem:
+- AWS outposts
+- Azure stack
+- Google Anthos
+
+Private cloud is cloud computing which meets 5 characteristics but is 
+dedicated to a business
+
+Hybrid cloud
+------------
+Using private (on prem) and public cloud. Example, AWS + AWS Outposts
