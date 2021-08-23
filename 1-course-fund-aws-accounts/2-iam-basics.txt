@@ -21,3 +21,5 @@ Best practices
 --------------
 Only grant access as it's required - i.e. least privilege
 Only use account root user to set up the account
+
+You can only have 2 sets of access keys for an IAM user
