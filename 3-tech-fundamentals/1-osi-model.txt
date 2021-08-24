@@ -105,3 +105,31 @@ Packet transfer process:
 as the destination. Example, given a destination 52.217.13.37 and a route 
 52.217.13.0/24, this will be selected as it's closest to the destination IP address
 - Packets are forwarded to next router for succeeding hops
+
+Address Resolution Protocol (ARP): resolves MAC addresses from an IP address
+
+- ARP operates on L2 and sends a broadcast and asks who has the following IP address
+- Destination responds with its MAC address
+
+L2 is used for local communication
+
+Routing example:
+- Orange network
+- Green network
+- Pink network
+
+Orange and Greeen has R1 (Router)
+Green and Pink has R2
+
+2 laptops in Orange, 1 in Pink
+
+The 2 laptops in Orange are able to communicate using L2 only because they're in the same network
+ARP is used to obtain the laptop's MAC address
+Frames are constructed based on this and information is passed through L1
+
+When communicating outside the network, the device:
+- obtains the default gateway's MAC address
+- creates frame with MAC address and sends this across to the gateway
+- R1 strips away the packet and routes the packet to the next network
+- Packet is encapsulated at next hop and sent to R2
+- R2 strips away the packet and routes the packet to the destination
