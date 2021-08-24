@@ -21,3 +21,21 @@ Segments breakdown (TCP header):
 - TCP window: number of bytes willing to receive after acknowledgment
 - Checksum: used for error checking
 - Urgent pointer: used to control traffic
+
+Architecture of TCP: a connection based protocol that allows communication between a client and a server
+The use of segments allows for the ordered transfer of data
+
+Ephemeral port: the port that the client picks - usually a high number
+Well known port: 443, 80, etc
+
+TCP connection 3 way handshake:
+- client informs server with sequence number it's going to start with using a sequence. Sets SYN
+- server creates its own segment with its own segment number and responds with SYN & ACK and increments the client's sequence number
+- client acknowledges the server by responding with an ACK containing the incremented server sequence number and its own incremented sequence number
+
+
+Stateless firewall (NACL): 
+- Outbound segments: client to server
+- Inbound segments: server to client
+
+Stateful firewall (security groups): if you allow the outbound, the inbound is automatically allowed

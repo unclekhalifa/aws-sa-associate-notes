@@ -1,0 +1,25 @@
+NAT (Network Address Translation)
+
+Created to overcome IPv4 shortages
+Also provides security benefits
+
+Static NAT: 1 private IP to 1 public IP (IGW)
+
+Dynamic NAT: 1 private to 1st available public
+
+Port address translation (PAT): many private to 1 public (NATGW)
+
+IPv6 means no need for NAT
+
+Static NAT walkthrough:
+- Device A wishes to send data to API via NAT device
+- NAT replaces source IP of packets from private to public IP address
+- Public IP in response packets are then replaced with private IP address
+
+Dynamic NAT walkthrough:
+- Similar to static except there's a pool of public IPs that can be dynamically and temporarily allocated
+- If all public IPs are in use and another device tries to send a request, it will fail
+
+PAT walkthrough (NATGW):
+- Translates the source IP and port to be different to the original before forwarding packets to the destination
+- Updates NAT table with the original source IPs and ports to make sure they're returning to the original sender
