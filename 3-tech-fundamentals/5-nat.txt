@@ -23,3 +23,35 @@ Dynamic NAT walkthrough:
 PAT walkthrough (NATGW):
 - Translates the source IP and port to be different to the original before forwarding packets to the destination
 - Updates NAT table with the original source IPs and ports to make sure they're returning to the original sender
+
+IP Addresses
+
+Class A IP addresses - huge networks. First octet is for the network:
+- 0.0.0.0 - 127.255.255.255
+
+Class B IP addresses - larger businesses. First 2 octets are for the network:
+- 128.0.0.0 - 191.255.255.255
+
+Class C - smaller businesses. First 3 octets are for the network:
+- 192.0.0.0 - 223.255.255.255
+
+Reserved private IP addresses:
+- 10.0.0.0 - 10.255.255.255 (Class A networks)
+- 172.16.0.0 - 172.31.255.255 (Class B networks)
+- 192.168.0.0 - 192.168.255.255 (Class C networks)
+
+
+Classless Inter Domain Routing (CIDR)
+The larger the prefix, the smaller the network
+
+Subnetting is the process of taking a larger network and breaking it down into smaller networks
+
+Calculating subnet
+
+Calculate start and end of the network
+10.16.0.0/16 = 10.16.0.0 => 10.16.255.255
+
+Split the original range into 2 and increment the prefix
+10.16.0.0/17 = 10.16.0.0 => 10.16.127.255
+
+10.16.128.0/17 = 10.16.128.0 => 10.16.255.255

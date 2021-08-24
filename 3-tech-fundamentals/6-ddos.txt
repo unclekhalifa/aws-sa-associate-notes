@@ -1,0 +1,16 @@
+DDOS
+----
+
+Attacks designed to overload websites
+
+Compete against legitimate connections
+
+Distributed - hard to block individual IPs/ranges
+
+Application layer - HTTP flood
+
+Protocol attack - SYN flood: spoof the source IP address and 
+initiate connection attempt. Can't connect to source IP and 
+hangs on the connection for some time
+
+Volumetric attack - DNS amplification
