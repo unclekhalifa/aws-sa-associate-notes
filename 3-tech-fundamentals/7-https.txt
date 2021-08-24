@@ -1,0 +1,32 @@
+SSL 3 way handshake
+
+1. Cipher suite
+TLS begins with established TCP connection. 
+Agree on the method of communication
+
+Client says HELLO with SSL/TLS version, cipher suites, Session ID
+
+SERVER says HELLO with server certificate (public key)
+
+2. Authentication
+
+Ensure the server certificate is authentic, verifying the 
+server as legitimate
+
+This will be done by a certificate authority (CA)
+
+The client trusts the public CA - it makes sure that the certificate 
+is valid (hasn't been revoked) and the DNS name matches the name on the cert
+
+The client verifies the server has the private key by sending some encrypted random data
+
+3. Key exchange
+
+Move from asymmetric to symmetric key in a secure way and begin encryption process
+
+The client generates the pre master key, encrypts it with the server's public key and sends it to the server
+
+The server decrypts the pre master key using its private key
+
+Both sides use the same pre master key to generate the master secret which is used to generate the ongoing 
+session keys which encrypt and decrypt data
