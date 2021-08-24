@@ -1,0 +1,23 @@
+Layer 4 - Transport
+-------------------
+
+Adds 2 new protocols: 
+- TCP (Transmission Control Protocol)
+- UDP (User Data Protocol)
+
+TCP is picked for reliability & error correction. Usually for HTTP
+Creates a bidirectional channel
+
+UDP is faster but less reliable
+
+TCP transfers data using Segments and are encapsulated within IP packets
+
+Segments breakdown (TCP header):
+- Source port
+- Destination port
+- Sequence number: used for error correction and ordering of IP packets
+- Acknowledgment: a way to show that the segment was received by the destination
+- Flags 'n' things: used to close connections and other options
+- TCP window: number of bytes willing to receive after acknowledgment
+- Checksum: used for error checking
+- Urgent pointer: used to control traffic

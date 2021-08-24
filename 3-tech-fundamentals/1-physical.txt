@@ -1,0 +1,12 @@
+Layer 1 - Physical
+------------------
+Data transmitted on a physical level through copper (electricity), fibre (light) or WiFi (RF)
+Specifications defined by things like voltage levels, timings, rates, distances, modulaiton & connectors
+
+Hub: anything received on any port is transmitted on every other port. It's a way to broadcast traffic to 
+all devices connected
+
+Layer 1 has no device addressing. All data is processed by all devices
+
+L1 has no media access control and no collision detection
+---
