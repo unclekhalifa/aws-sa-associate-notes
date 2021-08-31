@@ -1,0 +1,32 @@
+EC2
+---
+
+- IAAS - provides virtual machines
+- Private service by default 
+- AZ resilient: instance fails if AZ fails
+- Different instance sizes and capabilities
+- On demand billing - per second
+- Local on host storage or EBS
+
+Termination: instance is fully deleted
+
+When instance is running, you are being charged for:
+- CPU
+- Memory
+- Networking
+- Storage
+
+When an instance is stopped, you are being charged for:
+- Storage
+
+When the instance is terminated, you are being charged for nothing
+
+Amazon Machine Image: can be used to create an EC2 instance or can be used to create an AMI
+
+AMIs contain:
+- attached permissions:
+    - public: everyone can launch instances from this
+    - owner: only the owners can launch
+    - explicit: permissions for specific AWS accounts
+- root volume: C: drive for example
+- block device mapping: config which links the volumes the AMI has and how they're presented to the OS
