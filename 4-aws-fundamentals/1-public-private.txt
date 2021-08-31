@@ -1,0 +1,9 @@
+
+Public service: needs to be accessible via public internet with no restrictions. Example: S3
+
+Private service: no direct connectivity to the public. Example: EC2. No way to connect to internet or AWS public services by default
+
+Three zones:
+- Public internet
+- AWS public zone: AWS services are not on the public internet - they're in this zone
+- AWS private zone: usually isolated in the VPC (virtual private cloud). Only things that can connect are resources in the same private network or on premises private cloud
