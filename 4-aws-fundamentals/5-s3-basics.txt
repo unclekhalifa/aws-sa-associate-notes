@@ -1,0 +1,30 @@
+S3 basics
+---------
+
+Global storage platform - regional based/resilient
+
+Public service, unlimited data and multi user
+
+Used for movies, audio, photos, text and large datasets
+
+Economical and accessed via UI/CLI/API/HTTP
+
+Delivers objects and buckets
+
+Objects have:
+- Key: think of it as a filename
+- Value: sequence of binary data
+
+An object can be 0KB or 5TB (max)
+
+AWS bucket names are globally unique i.e. you cannot have the same name as someone else
+
+Buckets can hold unlimited number of objects
+
+Object storage is a flat structure i.e. everything is on the same level, not like a filesystem
+
+Folders are called prefixes
+
+Bucket names need to be between 3 - 63 characters, all lower cases, no underscores
+
+Buckets have a 100 soft limit, 1000 hard limit per account
