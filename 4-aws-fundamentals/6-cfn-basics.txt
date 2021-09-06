@@ -1,4 +1,2 @@
 CFN
 ---
-
-Cloud formation
