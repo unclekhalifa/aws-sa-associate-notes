@@ -1,0 +1,27 @@
+CW
+--
+
+Collects and manages operational data:
+- Metrics: information about AWS products, apps, on premises, etc. Example, disk usage for an EC2 instance
+- CloudWatch Logs: collecting logs by things like Windows server, Apache, etc
+- CloudWatch Events: provides services and schedules
+
+Namespace: container for monitoring data
+    - All AWS services go into a namespace called AWS/{{serviceName}}
+    - Namespaces contain related metrics
+
+Metrics: time ordered set of data points. Example: CPU usage, network, disk IO, etc
+    A metric is not for a specific server
+
+Datapoint: consists of a timestamp and value. Example, CPU utilisation metric would contain multiple datapoints for CPU usages
+
+Dimension: used to differentiate multiple resources sending data to the same metric
+
+Example: given a CPUUtilisation metric, we could have 3 servers sending multiple datapoints. We would 
+also have dimensions telling us which information came from which instance
+
+CW allows us to take actions based on metrics
+
+An alarm is linked to a metric. Example: CPU usage being > 80% would move to an alarm state, OK state otherwise
+
+An alarm could send notifications to an SNS topic or send emails
