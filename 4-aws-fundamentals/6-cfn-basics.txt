@@ -1,3 +1,18 @@
 CFN
 ---
 
+Written in YAML or JSON
+
+If you have both Description and AWSTemplateFormatVersion, you need to add Description right before AWSTemplateFormatVersion
+
+Description: free text describing a template usage, cost, etc
+Resources: physical resources deployed in AWS
+Metadata: controls how things are displayed in the AWS console
+Parameters: prompts the user for more info. Example: EC2 sizes
+Mappings: allows you to create lookup tables
+Conditions: allows decision making in the templates
+Outputs: return the output of the template. For example, return instance ID of an EC2 template
+
+Stack: templates create one or more stacks
+
+CF templates creates logical resources which will in turn create physical resources
