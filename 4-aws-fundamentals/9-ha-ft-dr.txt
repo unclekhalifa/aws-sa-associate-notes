@@ -1,0 +1,30 @@
+High Availability
+-----------------
+
+Aims to ensure an agreed level of operational performance, usually uptime, for a higher than normal period
+
+Think of a load balanced infrastructure
+
+Fault tolerance
+---------------
+
+Property that enables a system to continue operating properly in the event of the failure of some of its components
+
+Think of a medical device that needs to be up no matter what. It would need redundancy in all layers and ensure they're always up
+
+Minimise outage and design system to tolerate a failure
+
+Disaster recovery
+-----------------
+A set of policies, tools and procedures to enable the recovery or continuation of vital technology infrastructure and systems following a natural or human disaster
+
+DR would be a drill exercise on how to respond when there's an outage
+
+Important to note
+-----------------
+Implementing FT when you only need HA takes longer, costs more and is more complex to design
+Implementing HA when you need FT may potentially put lives at risk
+
+HA minimises any outages
+FT means operating through faults
+DR is used when the above don't work
