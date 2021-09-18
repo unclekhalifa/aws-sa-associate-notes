@@ -4,3 +4,4 @@ DNS
 - DNS is a discovery service
 - Translates machine into human and vice versa
 - It's a huge database and has to be distributed
+
