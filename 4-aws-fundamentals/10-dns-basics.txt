@@ -7,16 +7,13 @@ DNS
 DNS client: your computer, phone, etc
 
 DNS resolver: sitting on your DNS client, internet router or within ISP
-
 DNS zone: a part of the DNS database
-
 Zone file: DNS record that links a domain name to an IP address
 
 Zone files are hosted by a Name Server
 They can be located anywhere
 
 DNS Nameserver: where zone files are hosted
-
 DNS root: hosted on 13 DNS root servers
 
 DNS client asks DNS resolver for IP address
