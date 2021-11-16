@@ -16,5 +16,5 @@ They can be located anywhere
 DNS Nameserver: where zone files are hosted
 DNS root: hosted on 13 DNS root servers
 
-DNS client asks DNS resolver for IP address
-DNS resolver communicates with one or more of the root servers to get the IP address
+- DNS client asks DNS resolver for IP address
+- DNS resolver communicates with one or more of the root servers to get the IP address
