@@ -5,7 +5,7 @@ AWS regions: area of the world with AWS infrastructure (compute, storage, DB, et
 
 AWS edge locations: local distribution points - smaller than regions. Helpful for storing data as close to customers as possible for fast data transfer
 
-https://aws.amazon.com/about-aws/global-infrastructure/regions_az/
+Resource: https://aws.amazon.com/about-aws/global-infrastructure/regions_az/
 
 Region benefits:
 - Geographic separation - isolated fault domain. Won't have any issues with natural disasters
@@ -20,6 +20,6 @@ AZ is not necessarily a data centre
 
 Services can be placed across multiple AZs to make them resilient - example, VPC
 
-Globally resilient: service operates globally with a single database. Example: IAM & R53
+Globally resilient: service operates globally with a single database. Example: IAM & Route53
 Region resilient: operate in single region with single dataset. Example: RDS
 AZ resilient: deployed in a single AZ. If that AZ fails, that service fails
