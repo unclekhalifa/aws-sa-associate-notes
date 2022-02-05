@@ -23,7 +23,7 @@ Buckets can hold unlimited number of objects
 
 Object storage is a flat structure i.e. everything is on the same level, not like a filesystem
 
-Folders are called prefixes
+Folders are called prefixes. These days they're called folders
 
 Bucket names need to be between 3 - 63 characters, all lower cases, no underscores
 
